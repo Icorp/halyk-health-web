@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import 'font-awesome/css/font-awesome.css';
 </script>
 
 <template>
@@ -13,9 +14,26 @@ import HelloWorld from './components/HelloWorld.vue'
       </nav>
     </div>
   </header>
-
+  <SwipeBottomNavigation :options="options" v-model="selected" />
   <RouterView />
 </template>
+
+<script>
+  import { SwipeBottomNavigation } from "bottom-navigation-vue";
+  import "bottom-navigation-vue/dist/style.css";
+
+  export default {
+    components: { SwipeBottomNavigation },
+    data: () => ({
+    selected: 1,
+    options: [
+      { id: 1, icon: 'fa fa-balance-scale ', title: 'Home' },
+      { id: 2, icon: 'fa fa-bug', title: 'Search' },
+      { id: 3, icon: 'fa fa-plus-circle', title: 'Setting' },
+    ]
+    }),
+  };
+</script>
 
 <style scoped>
 header {
