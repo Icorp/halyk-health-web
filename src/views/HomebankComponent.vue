@@ -38,10 +38,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.greeting {
-  color: red;
-  font-weight: bold;
-}
-</style>
