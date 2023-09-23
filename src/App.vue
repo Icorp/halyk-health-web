@@ -31,7 +31,10 @@ const data = {
   </div>
   <SwipeBottomNavigation :options="options" v-model="selected" swiperColor="#00BD7E" backgroundColor="#fff"
     iconColor="#00BD7E">
-    <template #title="{ props }">
+    <template #icon="{ props }" #title="props">
+      <i :class="props.icon"></i>
+    </template>
+    <template #title="{ props }" #icon="props">
       <RouterLink to="/">
         <b>{{ props.title }}</b>
       </RouterLink>
