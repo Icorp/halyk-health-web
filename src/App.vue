@@ -9,8 +9,7 @@ import 'font-awesome/css/font-awesome.css';
 
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/check">Check</RouterLink>
+        <RouterLink to="/check_list">Check</RouterLink>
       </nav>
     </div>
   </header>
