@@ -1,15 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 import 'font-awesome/css/font-awesome.css';
 </script>
 
 <template>
   <header>
-
-    <div class="wrapper">
+    <div class="wrapper" v-if="!this.$route.params.id">
       <nav>
-        <RouterLink to="/check_list">Check</RouterLink>
+        <RouterLink to="/check-list">Check</RouterLink>
       </nav>
     </div>
   </header>
