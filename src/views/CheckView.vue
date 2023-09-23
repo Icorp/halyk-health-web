@@ -16,11 +16,12 @@ const data = {
 </script>   
 
 <template>
-    <div style="height: 100px; border-bottom: 1px solid black; width: 100vw;">
+    <div style="border-bottom: 1px solid black;">
         <a @click="goBack">
-            <v-icon></v-icon>       </a>
-
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
+
+         </a>
+
 
         <div>User {{ data[$route.params.id] }}</div>
         <p>
