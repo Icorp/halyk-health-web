@@ -5,7 +5,7 @@ import 'font-awesome/css/font-awesome.css';
 
 <template>
 
-  <SwipeBottomNavigation :options="options" v-model="selected" replaceRoute=True swiperColor="#00BD7E" backgroundColor="#fff"
+  <SwipeBottomNavigation :options="options" v-model="selected" swiperColor="#00BD7E" backgroundColor="#fff"
     iconColor="#00BD7E">
     <template #title="{ props }">
       <RouterLink to="/">

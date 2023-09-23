@@ -5,17 +5,17 @@
                 display: flex;
                 justify-content: space-between;">
             <div class="a-center">
-                <RouterLink to="/check-list/1"><img src="/src/assets/1.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
-                <RouterLink to="/check-list/2"><img src="/src/assets/2.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
-                <RouterLink to="/check-list/3"><img src="/src/assets/3.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
-                <RouterLink to="/check-list/4"><img src="/src/assets/4.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
+                <RouterLink to="/check-list/lung"><img src="/src/assets/lung.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
+                <RouterLink to="/check-list/liver"><img src="/src/assets/liver.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
+                <RouterLink to="/check-list/fat"><img src="/src/assets/fat.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
+                <RouterLink to="/check-list/colon"><img src="/src/assets/colon.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
             </div>
             <div class="a-center">
 
-                <RouterLink to="/check-list/5"><img src="/src/assets/5.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
-                <RouterLink to="/check-list/6"><img src="/src/assets/6.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
-                <RouterLink to="/check-list/7"><img src="/src/assets/7.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
-                <RouterLink to="/check-list/8"><img src="/src/assets/8.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
+                <RouterLink to="/check-list/brain"><img src="/src/assets/brain.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
+                <RouterLink to="/check-list/heart"><img src="/src/assets/heart.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
+                <RouterLink to="/check-list/bud"><img src="/src/assets/bud.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
+                <RouterLink to="/check-list/stomach"><img src="/src/assets/stomach.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
             </div>
 
         </div>
@@ -23,7 +23,7 @@
 
     </div>
 </template>
-  
+
 <style>
 .about {
     display: flex;
