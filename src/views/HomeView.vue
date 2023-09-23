@@ -87,8 +87,8 @@ export default {
     background-position: center;
     width: 100%;
     height: auto;
-    background-size: cover;
-    background-position-y: 75%;
+
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
