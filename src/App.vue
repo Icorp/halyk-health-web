@@ -1,10 +1,34 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import 'font-awesome/css/font-awesome.css';
+const data = {
+    "brain": "Мозг",
+    "bud": "Почки",
+    "colon": "Прямая кишка",
+    "fat": "Жир",
+    "heart": "Сердце",
+    "liver": "Печень",
+    "lung": "Легкие",
+    "stomach": "Желудок",
+    "health": "Halyk Health"
+};
 </script>
 
 <template>
+  <div class="nav sticky">
+          <a @click="goBack" v-if="$route.params.id">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </a>
+          <div v-else></div>
 
+        <div>{{ data[$route.params.id] ? data[$route.params.id] : data["health"]  }}</div>
+        <div>
+
+        </div>
+    </div>
+    <div class="content">
+    <RouterView />
+  </div>
   <SwipeBottomNavigation :options="options" v-model="selected" swiperColor="#00BD7E" backgroundColor="#fff"
     iconColor="#00BD7E">
     <template #title="{ props }">
@@ -13,7 +37,7 @@ import 'font-awesome/css/font-awesome.css';
       </RouterLink>
     </template>
   </SwipeBottomNavigation>
-  <RouterView />
+
 </template>
 
 <script>
@@ -29,6 +53,11 @@ import 'font-awesome/css/font-awesome.css';
         { id: 1, icon: 'fa fa-address-card ', title: 'Component', path: {name: "component",}},
       ]
       }),
+    methods: {
+        goBack() {
+            this.$router.go(-1)
+        }
+    }
   };
 </script>
 
@@ -45,56 +74,31 @@ header {
   display: block;
   margin: 0 auto 2rem;
 }
-
-nav {
+.content{
+    padding: 0 2rem 2rem 2rem;
+} 
+.sticky + .content {
+  padding-top: 60px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
 }
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
+.nav {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+.nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
 }
 </style>
