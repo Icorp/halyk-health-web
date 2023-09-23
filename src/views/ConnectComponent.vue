@@ -5,24 +5,39 @@ const greeting = ref('Hello World!')
 </script>
 
 <template>
-  <div>
-    <b-card
-        title="Card Title"
-        img-src="https://picsum.photos/600/300/?image=25"
-        img-alt="Image"
-        img-top
-        tag="article"
-        style="max-width: 20rem;"
-        class="mb-2"
-    >
-      <b-card-text>
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </b-card-text>
-
-      <b-button href="#" variant="primary">Go somewhere</b-button>
-    </b-card>
-  </div>
+  <MDBCard text="center">
+    <MDBCardBody>
+      <MDBCardTitle>Подключите eGov</MDBCardTitle>
+      <MDBCardText>
+        With supporting text below as a natural lead-in to additional content.
+      </MDBCardText>
+      <MDBBtn tag="a" href="#!" color="primary">Подключить</MDBBtn>
+    </MDBCardBody>
+  </MDBCard>
+  <MDBCard text="center">
+    <MDBCardBody>
+      <MDBCardTitle>Подключите iHealth</MDBCardTitle>
+      <MDBCardText>
+        With supporting text below as a natural lead-in to additional content.
+      </MDBCardText>
+      <MDBBtn tag="a" href="#!" color="primary">Подключить</MDBBtn>
+    </MDBCardBody>
+  </MDBCard>
 </template>
+
+<script>
+import { MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from "mdb-vue-ui-kit";
+export default {
+  components: {
+    MDBCard,
+    MDBCardHeader,
+    MDBCardBody,
+    MDBCardTitle,
+    MDBCardText,
+    MDBBtn
+  }
+};
+</script>
 
 <style>
 .greeting {

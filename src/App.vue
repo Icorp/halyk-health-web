@@ -33,6 +33,9 @@ import 'font-awesome/css/font-awesome.css';
 </script>
 
 <style scoped>
+#app {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
