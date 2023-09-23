@@ -5,7 +5,7 @@ const greeting = ref('Hello World!')
 </script>
 
 <template>
-  <MDBCard text="center">
+  <MDBCard text="center" class="mt-5 mb 5" >
     <MDBCardBody>
       <MDBCardTitle>Подключите eGov</MDBCardTitle>
       <MDBCardText>
@@ -14,13 +14,13 @@ const greeting = ref('Hello World!')
       <MDBBtn tag="a" href="#!" color="primary">Подключить</MDBBtn>
     </MDBCardBody>
   </MDBCard>
-  <MDBCard text="center">
+  <MDBCard text="center" class="mt-5 mb 5">
     <MDBCardBody>
       <MDBCardTitle>Подключите iHealth</MDBCardTitle>
       <MDBCardText>
         With supporting text below as a natural lead-in to additional content.
       </MDBCardText>
-      <MDBBtn tag="a" href="#!" color="primary">Подключить</MDBBtn>
+      <MDBBtn tag="a" href="#!" color="warning">Подключить</MDBBtn>
     </MDBCardBody>
   </MDBCard>
 </template>
