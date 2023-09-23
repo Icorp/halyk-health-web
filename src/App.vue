@@ -26,6 +26,7 @@ import 'font-awesome/css/font-awesome.css';
         selected: 0,
       options: [
         { id: 0, icon: 'fa fa-home', title: 'Home', path: {name: "home",}},
+        { id: 1, icon: 'fa fa-address-card ', title: 'Component', path: {name: "component",}},
       ]
       }),
   };
