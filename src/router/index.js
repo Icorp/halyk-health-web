@@ -4,8 +4,8 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/check-list',
-      name: 'Check list',
+      path: '/',
+      name: 'home',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -13,7 +13,7 @@ const router = createRouter({
     },
     {
       path: '/check-list/:id',
-      name: 'Check view',
+      name: 'check view',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

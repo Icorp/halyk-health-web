@@ -4,56 +4,31 @@ import 'font-awesome/css/font-awesome.css';
 </script>
 
 <template>
-  <header>
-    <div class="wrapper" v-if="!this.$route.params.id">
-      <nav>
-        <RouterLink to="/check-list">Check</RouterLink>
-      </nav>
-    </div>
-  </header>
-  <SwipeBottomNavigation :options="options" v-model="selected" swiperColor="#00BD7E" backgroundColor="#fff"
+
+  <SwipeBottomNavigation :options="options" v-model="selected" replaceRoute=True swiperColor="#00BD7E" backgroundColor="#fff"
     iconColor="#00BD7E">
+    <template #title="{ props }">
+      <RouterLink to="/">
+        <b>{{ props.title }}</b>
+      </RouterLink>
+    </template>
   </SwipeBottomNavigation>
   <RouterView />
 </template>
 
 <script>
-import { SwipeBottomNavigation } from "bottom-navigation-vue";
-import "bottom-navigation-vue/dist/style.css";
+  import { SwipeBottomNavigation } from "bottom-navigation-vue";
+  import "bottom-navigation-vue/dist/style.css";
 
-export default {
-  components: {
-    SwipeBottomNavigation
-  },
-  data() {
-    return {
-      selected: 0, // Set the default selected item
+  export default {
+    components: { SwipeBottomNavigation },
+    data: () => ({
+        selected: 0,
       options: [
-        {
-          id: 0,
-          icon: 'fa fa-home',
-          title: 'Home',
-          path: {
-            name: "home",
-          }
-        },
-        {
-          id: 1,
-          icon: 'fa fa-search',
-          title: 'Search',
-          path: {
-            name: "check",
-          }
-        },
-        {
-          id: 2,
-          icon: 'fa fa-cog',
-          title: 'Settings'
-        },
-      ],
-    };
-  }
-};
+        { id: 0, icon: 'fa fa-home', title: 'Home', path: {name: "home",}},
+      ]
+      }),
+  };
 </script>
 
 <style scoped>
