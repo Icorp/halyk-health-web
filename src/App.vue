@@ -11,25 +11,49 @@ import 'font-awesome/css/font-awesome.css';
       </nav>
     </div>
   </header>
-  <SwipeBottomNavigation :options="options" v-model="selected" />
+  <SwipeBottomNavigation :options="options" v-model="selected" swiperColor="#00BD7E" backgroundColor="#fff"
+    iconColor="#00BD7E">
+  </SwipeBottomNavigation>
   <RouterView />
 </template>
 
 <script>
-  import { SwipeBottomNavigation } from "bottom-navigation-vue";
-  import "bottom-navigation-vue/dist/style.css";
+import { SwipeBottomNavigation } from "bottom-navigation-vue";
+import "bottom-navigation-vue/dist/style.css";
 
-  export default {
-    components: { SwipeBottomNavigation },
-    data: () => ({
-    selected: 1,
-    options: [
-      { id: 1, icon: 'fa fa-balance-scale ', title: 'Home' },
-      { id: 2, icon: 'fa fa-bug', title: 'Search' },
-      { id: 3, icon: 'fa fa-plus-circle', title: 'Setting' },
-    ]
-    }),
-  };
+export default {
+  components: {
+    SwipeBottomNavigation
+  },
+  data() {
+    return {
+      selected: 0, // Set the default selected item
+      options: [
+        {
+          id: 0,
+          icon: 'fa fa-home',
+          title: 'Home',
+          path: {
+            name: "home",
+          }
+        },
+        {
+          id: 1,
+          icon: 'fa fa-search',
+          title: 'Search',
+          path: {
+            name: "check",
+          }
+        },
+        {
+          id: 2,
+          icon: 'fa fa-cog',
+          title: 'Settings'
+        },
+      ],
+    };
+  }
+};
 </script>
 
 <style scoped>
