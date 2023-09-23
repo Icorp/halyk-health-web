@@ -1,8 +1,4 @@
 <script setup>
-    import { ref } from 'vue'
-    const greeting = ref('Hello World!')
-    console.log(greeting);
-
 const data = {
     "brain": "Мозг",
     "bud": "Почки",
@@ -16,34 +12,81 @@ const data = {
 </script>   
 
 <template>
-    <div style="border-bottom: 1px solid black;">
-        <a @click="goBack">
+    <div class="nav sticky">
+            <a @click="goBack">
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
 
          </a>
 
+        <div>{{ data[$route.params.id] }}</div>
+        <div>
 
-        <div>User {{ data[$route.params.id] }}</div>
-        <p>
-            a
-        </p>
+        </div>
     </div>
-    <p class="greeting">cxcx</p>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, officiis? Asperiores, suscipit exercitationem modi vel nisi molestiae sequi eligendi enim nulla iusto ratione qui harum quasi sed laborum omnis voluptates?</p>
+    </div>
+
 </template>
   
 <style>
+.content{
+    padding: 0 2rem;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
 .greeting {
     color: red;
     font-weight: bold;
-  }
-  </style>
+}
+</style>
 
 <script>
+
+import { ref } from 'vue';
+
+
 export default {
-  methods: {
-    goBack() {
-      this.$router.go(-1)
+    methods: {
+        goBack() {
+            this.$router.go(-1)
+        }
     }
-  }
 }
 </script>

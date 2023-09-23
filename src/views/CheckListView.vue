@@ -1,5 +1,5 @@
 <template>
-    <div class="about a">
+    <div class="about a content">
 
         <div style="width: 100%;
                 display: flex;
@@ -25,6 +25,9 @@
 </template>
 
 <style>
+.content{
+    padding: 0 2rem;
+}
 .about {
     display: flex;
     flex-wrap: wrap;
