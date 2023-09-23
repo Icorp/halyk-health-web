@@ -23,9 +23,11 @@
 </template>
   
 <style>
-p{
-    margin: 0;
-    padding: 0;
+
+
+.greeting {
+    color: red;
+    font-weight: bold;
 }
 </style>
 

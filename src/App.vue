@@ -96,8 +96,6 @@ header {
     height: 50px;
     background-color: #fff;
     border-bottom: 1px solid #ccc;
-    box-shadow: 0px 1px 10px 2px rgba(34, 60, 80, 0.2);
-
 }
 
 .nav a {
