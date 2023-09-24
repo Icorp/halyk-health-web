@@ -1,3 +1,6 @@
+<script setup>
+</script>
+
 <template>
     <div>
         <p class="p-comment">
@@ -19,8 +22,6 @@
 
     </div>
 </template>
-
-
 
 <style>
 .files {
@@ -81,11 +82,17 @@
     margin: 0 ;
     padding: 0;
 
+
 }
 </style>
 <script>
+import DoctorComponent from "./DoctorComponent.vue";
+
 export default {
     name: "FileView",
+    components: {
+      DoctorComponent,
+    },
     props: [
         'title',
         'date',

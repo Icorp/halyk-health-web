@@ -14,7 +14,16 @@
 <template>
     <div class="main">
         <div>
+                <img src="/src/assets/cardio1.jpeg">
+                <div class="heart-status">
+                    <p>
+                        Общее состояние сердца
+                    </p>
+                    <div class="progressbar">
+  <span style="width: 30%"></span>
+</div>
 
+                </div>
                 <div v-for="item in items[$route.params.id]">
                     <ButtonComponent
                         v-bind:title="item.title"
@@ -27,6 +36,8 @@
                 </div>
 
         </div>
+
+       
         <div>
 
         <div style="height: fit-content;" class="low-btn">
@@ -45,6 +56,85 @@
   
 <style>
 
+
+
+.progressbar { 
+	height: 20px;
+	position: relative;
+	background: #555;
+	padding: 3px;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+.progressbar > span {
+  display: block;
+  height: 100%;
+  background-color: rgb(43,194,83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+.orange > span {
+  background-color: #f1a165;
+  background-image: linear-gradient(to bottom, #f1a165, #f36d0a);
+}
+
+.red > span {
+  background-color: #f0a3a3;
+  background-image: linear-gradient(to bottom, #f0a3a3, #f42323);
+} 
+.progressbar > span:after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image: linear-gradient(
+    -45deg, 
+    rgba(255, 255, 255, .2) 25%, 
+    transparent 25%, 
+    transparent 50%, 
+    rgba(255, 255, 255, .2) 50%, 
+    rgba(255, 255, 255, .2) 75%, 
+    transparent 75%, 
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  overflow: hidden;
+}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+
+
+.heart-status {
+    width: 100%;
+    height: auto;
+    padding: 12px 16px;
+    margin: auto;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    margin-top: 5%;
+}
+img {
+    width: 100%;
+    border-radius: 20px;
+}
 .main{
     width: 100%;
     height: 80vh;
@@ -89,6 +179,7 @@ import { ref } from 'vue';
 import ButtonComponent from './ButtonComponent.vue';
 
 
+
 export default {
     components: {
         ButtonComponent
@@ -109,7 +200,7 @@ export default {
                             "dateTime": "27 апр. 2023",
                             "status": "Пройдено",
                             "btnColor": "#2AA65C",
-                            "btnLink": "/cardiogram"
+                            "btnLink": "https://api15.ilovepdf.com/v1/download/q36trk51vgts6y51p09hccq7krkd2p1lh425Akq50xxq606f70kwc0nkdhAhjqcw4hv5kpmchq2t0wv3vn095ngyk7ky3k2yfgjks11zzp2lk5nf1n6r8vh1krky7tjbz1jvb7qmrAyw6by66d8lAAg8pjp0zdrr73kbzkq0dh6vyAjrfb9q"
                         },
                         {
                             "title": "Сдать анализы",
