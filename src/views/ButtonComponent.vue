@@ -57,7 +57,7 @@
 
 .b {
     width: 100%;
-    height: 20%;
+    height: auto;
     padding: 12px 16px;
     margin: auto;
     border-radius: 12px;
