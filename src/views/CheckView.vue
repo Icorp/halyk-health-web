@@ -1,6 +1,6 @@
 <script setup>
 
-</script>   
+</script>
 
 <template>
     <div v-for="item in items">

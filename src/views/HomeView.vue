@@ -20,28 +20,32 @@
 
         </div>
     </div>
-    <MDBCard text="center" class="mt-5 mb 5" >
+    <MDBCard text="center">
       <MDBCardBody>
-        <MDBCardTitle>Подключите eGov</MDBCardTitle>
-        <MDBCardText>
-          With supporting text below as a natural lead-in to additional content.
-        </MDBCardText>
-        <MDBBtn tag="a" href="#!" color="primary">Подключить</MDBBtn>
-      </MDBCardBody>
-    </MDBCard>
-    <MDBCard text="center" class="mt-5 mb 5">
-      <MDBCardBody>
-        <MDBCardTitle>Подключите iHealth</MDBCardTitle>
-        <MDBCardText>
-          With supporting text below as a natural lead-in to additional content.
-        </MDBCardText>
-        <MDBBtn tag="a" href="#!" color="warning">Подключить</MDBBtn>
+        <MDBCard text="center" >
+          <MDBCardBody>
+            <MDBCardTitle>eGov</MDBCardTitle>
+            <MDBCardText>
+              Для синхронизации данных с Egov необходимо авторизоваться.
+            </MDBCardText>
+            <MDBBtn tag="a" href="#!" color="primary">Подключить</MDBBtn>
+          </MDBCardBody>
+        </MDBCard>
+        <MDBCard text="center" class="mt-5 mb 5">
+          <MDBCardBody>
+            <MDBCardTitle>Подключите iHealth</MDBCardTitle>
+            <MDBCardText>
+              Для синхронизации данных с iHealth необходимо авторизоваться.
+            </MDBCardText>
+            <MDBBtn tag="a" href="#!" color="warning">Подключить</MDBBtn>
+          </MDBCardBody>
+        </MDBCard>
       </MDBCardBody>
     </MDBCard>
 </template>
 
 <script>
-import { MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from "mdb-vue-ui-kit";
+import { MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn,MDBRow,MDBCol,MDBCardImg } from "mdb-vue-ui-kit";
 export default {
   components: {
     MDBCard,
@@ -49,7 +53,10 @@ export default {
     MDBCardBody,
     MDBCardTitle,
     MDBCardText,
-    MDBBtn
+    MDBBtn,
+    MDBRow,
+    MDBCol,
+    MDBCardImg
   }
 };
 </script>

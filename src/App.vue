@@ -53,7 +53,7 @@ const data = {
     data: () => ({
         selected: 0,
       options: [
-        { id: 0, icon: 'fa fa-home', title: 'Home', path: {name: "home",}},
+        { id: 0, icon: 'fa fa-heart-pulse', title: 'Home', path: {name: "home",}},
         { id: 1, icon: 'fa fa-address-card ', title: 'Component', path: {name: "component",}},
       ]
       }),
@@ -80,7 +80,7 @@ header {
 }
 .content{
     padding: 0 2rem 2rem 2rem;
-} 
+}
 .sticky + .content {
   padding-top: 60px;
 }
