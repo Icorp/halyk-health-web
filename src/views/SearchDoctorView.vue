@@ -33,24 +33,38 @@ export default {
     },
     data () {
         return {
-            items: [
+            doctors: [
                 {
                     "image": "/src/assets/doctor.png",
-                    "name": "PDF",
-                    "speciality": "27 апр. 2023",
-                    "education": "Пройдено",
+                    "name": "Жанболат",
+                    "speciality": "Терапевт",
+                    "education": "Универ 1",
+                    "time": "16:05",
+                    "date": "24 апреля 2023",
                 },
                 {
                     "image": "/src/assets/doctor.png",
-                    "name": "PDF",
-                    "speciality": "27 апр. 2023",
-                    "education": "Пройдено",
+                    "name": "Казбек",
+                    "speciality": "Хирург",
+                    "education": "Универ 2",
+                    "time": "16:05",
+                    "date": "24 апреля 2023",
                 },
                 {
                     "image": "/src/assets/doctor.png",
-                    "name": "PDF",
-                    "speciality": "27 апр. 2023",
-                    "education": "Пройдено",
+                    "name": "Аскар",
+                    "speciality": "Стомотолог",
+                    "education": "Универ 3",
+                    "time": "16:05",
+                    "date": "24 апреля 2023",
+                },
+                {
+                    "image": "/src/assets/doctor.png",
+                    "name": "Алдияр",
+                    "education": "",
+                    "speciality": "Окулист",
+                    "time": "16:05",
+                    "date": "24 апреля 2023",
                 },
             ]
         }

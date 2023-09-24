@@ -4,9 +4,13 @@
             <img src="/src/assets/doctor.png">
         </div>
         <div class="b-right">
-            <p class="title">{{ name }}</p>
-            <p class="state">{{ specialty }}</p>
-            
+            <p class="name">{{ name }}</p>
+            <p class="speciality">{{ speciality }}</p>
+            <div v-if="education.trim().length === 0">
+                <p class="state">{{ time }}</p>
+                <p class="education">{{ date }}</p>
+            </div>
+            <div v-else class="education">{{ education}}</div>
         </div>
     </div>
 </template>
@@ -16,40 +20,35 @@
     font-size: 12px;
     color: #BDBDBD;
 }
-.title{
-    font-size: 15px;
+.name {
+    font-size: 14px;
+    color: #000000;
+    font-family: 'Manrope Regular', sans-serif;
 }
-.p-btn {
-    margin: 0;
-    padding: 0;
-    color: white;
+
+.speciality {
     font-size: 12px;
+    color: #000000;
+    font-family: 'Manrope Extralight', sans-serif;
 }
-.inner-btn {
-    width: 100%;
-    height: 70%;
-    padding-top: 8px;
-    padding-bottom: 7px;
-    background: #2AA65C;
-    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex
+
+.education {
+    font-size: 12px;
+    color: #BDBDBD;
 }
 
 .b-left {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    width: 70%;
+    width: 20%;
 }
 
 .b-right {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 20px;
 }
 
 .b {
@@ -71,8 +70,10 @@ export default {
     props: [
         'image',
         'name',
-        'specialty',
+        'speciality',
         'education',
+        'time',
+        'date',
     ],
     computed: {
     btnStyle() {
