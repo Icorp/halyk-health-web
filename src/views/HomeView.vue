@@ -20,28 +20,82 @@
 
         </div>
     </div>
-    <MDBCard text="center" class="mt-5 mb 5" >
+    <MDBCard text="center">
+      <MDBRow :cols="['1', 'md-3']" class="g-4">
+        <MDBCol>
+          <MDBCard>
+            <MDBCardImg src="https://mdbootstrap.com/img/new/standard/city/041.webp" top alt="..."/>
+            <MDBCardBody>
+              <MDBCardTitle>Card title</MDBCardTitle>
+              <MDBCardText>
+                This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
+              </MDBCardText>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+        <MDBCol>
+          <MDBCard>
+            <MDBCardImg src="https://mdbootstrap.com/img/new/standard/city/042.webp" top alt="..."/>
+            <MDBCardBody>
+              <MDBCardTitle>Card title</MDBCardTitle>
+              <MDBCardText>
+                This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
+              </MDBCardText>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+        <MDBCol>
+          <MDBCard>
+            <MDBCardImg src="https://mdbootstrap.com/img/new/standard/city/043.webp" top alt="..."/>
+            <MDBCardBody>
+              <MDBCardTitle>Card title</MDBCardTitle>
+              <MDBCardText>
+                This is a longer card with supporting text below as a natural lead-in to
+                additional content.
+              </MDBCardText>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+        <MDBCol>
+          <MDBCard>
+            <MDBCardImg src="https://mdbootstrap.com/img/new/standard/city/044.webp" top alt="..."/>
+            <MDBCardBody>
+              <MDBCardTitle>Card title</MDBCardTitle>
+              <MDBCardText>
+                This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
+              </MDBCardText>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+      </MDBRow>
       <MDBCardBody>
-        <MDBCardTitle>Подключите eGov</MDBCardTitle>
-        <MDBCardText>
-          With supporting text below as a natural lead-in to additional content.
-        </MDBCardText>
-        <MDBBtn tag="a" href="#!" color="primary">Подключить</MDBBtn>
-      </MDBCardBody>
-    </MDBCard>
-    <MDBCard text="center" class="mt-5 mb 5">
-      <MDBCardBody>
-        <MDBCardTitle>Подключите iHealth</MDBCardTitle>
-        <MDBCardText>
-          With supporting text below as a natural lead-in to additional content.
-        </MDBCardText>
-        <MDBBtn tag="a" href="#!" color="warning">Подключить</MDBBtn>
+        <MDBCard text="center" >
+          <MDBCardBody>
+            <MDBCardTitle>eGov</MDBCardTitle>
+            <MDBCardText>
+              Для синхронизации данных с Egov необходимо авторизоваться.
+            </MDBCardText>
+            <MDBBtn tag="a" href="#!" color="primary">Подключить</MDBBtn>
+          </MDBCardBody>
+        </MDBCard>
+        <MDBCard text="center" class="mt-5 mb 5">
+          <MDBCardBody>
+            <MDBCardTitle>Подключите iHealth</MDBCardTitle>
+            <MDBCardText>
+              Для синхронизации данных с iHealth необходимо авторизоваться.
+            </MDBCardText>
+            <MDBBtn tag="a" href="#!" color="warning">Подключить</MDBBtn>
+          </MDBCardBody>
+        </MDBCard>
       </MDBCardBody>
     </MDBCard>
 </template>
 
 <script>
-import { MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from "mdb-vue-ui-kit";
+import { MDBCard, MDBCardHeader, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn,MDBRow,MDBCol,MDBCardImg } from "mdb-vue-ui-kit";
 export default {
   components: {
     MDBCard,
@@ -49,7 +103,10 @@ export default {
     MDBCardBody,
     MDBCardTitle,
     MDBCardText,
-    MDBBtn
+    MDBBtn,
+    MDBRow,
+    MDBCol,
+    MDBCardImg
   }
 };
 </script>

@@ -3,27 +3,21 @@
 </script>
 
 <template>
-  <MDBCard>
-    <MDBCardImg
-        src="https://mdbootstrap.com/img/new/standard/nature/184.webp"
-        top
-    />
-    <MDBCardBody  class="mt-5 mb-5">
-      <MDBCardTitle>Card title</MDBCardTitle>
-      <MDBCardText>
-        Some quick example text to build on the card title and make up the bulk of the
-        card's content.
-      </MDBCardText>
-    </MDBCardBody>
-  </MDBCard>
-  <MDBCard>
-    <MDBCardBody>
-      <MDBCardText>
-        Some quick example text to build on the card title and make up the bulk of the
-        card's content.
-      </MDBCardText>
-    </MDBCardBody>
-  </MDBCard>
+  <div class="container" style="background-color: #00b74a">
+    <div class="row">
+      <div class="col-9">
+        <div class="col-6">
+          Кардиограмма
+        </div>
+        <div class="col-6">
+          Пройдено - 27 апр. 2023
+        </div>
+      </div>
+      <div class="col-3">
+        <img src="/src/assets/success.png" class="img-fluid" alt="Wild Landscape" />
+      </div>
+    </div>
+  </div>
 </template>
 
 
