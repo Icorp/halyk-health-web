@@ -10,7 +10,8 @@ const data = {
     "liver": "Печень",
     "lung": "Легкие",
     "stomach": "Желудок",
-    "health": "Halyk Health"
+    "health": "Halyk Health",
+    "1":"Заключение варча"
 };
 </script>
 
