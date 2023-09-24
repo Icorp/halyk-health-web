@@ -14,8 +14,8 @@
 <template>
     <div class="main">
         <div>
-            <div st v-for="section in items">
-                <div v-for="item in section[$route.params.id]">
+
+                <div v-for="item in items[$route.params.id]">
                     <ButtonComponent
                         v-bind:title="item.title"
                         v-bind:btnText="item.btnText"
@@ -25,14 +25,16 @@
                         v-bind:btnLink="item.btnLink"
                     />
                 </div>
-            </div>
+
         </div>
         <div>
 
         <div style="height: fit-content;" class="low-btn">
-            <p class="low-p">
-                История посещения у {{ data[$route.params.id]}}
-            </p>
+            <a href="/report/1">
+                <p class="low-p">
+                    История посещения у {{ data[$route.params.id]}}
+                </p>
+            </a>
         </div>
     </div>
 
@@ -98,7 +100,7 @@ export default {
     },
     data () {
         return {
-            items: [
+            items: 
                 {
                     "heart":[
                         {
@@ -123,11 +125,11 @@ export default {
                             "dateTime": "04 мая 2023",
                             "status": "Запись",
                             "btnColor": "#FF9901",
-                            "btnLink": "/record/1"
+                            "btnLink": ""
                         },
                     ]
                 }
-            ]
+            
         }
     }
 }
