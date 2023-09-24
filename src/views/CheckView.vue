@@ -115,7 +115,7 @@ export default {
                             "dateTime": "30 апр. 2023",
                             "status": "Доступная дата",
                             "btnColor": "#FF0101",
-                            "btnLink": "/cardiogram"
+                            "btnLink": "/search-doctor"
                         },
                         {
                             "title": "Прием у кардиолога",
