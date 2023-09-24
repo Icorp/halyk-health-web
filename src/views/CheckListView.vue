@@ -7,7 +7,7 @@
             <div class="a-center">
                 <RouterLink to="/check-list/lung"><img src="/src/assets/lung.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
                 <RouterLink to="/check-list/liver"><img src="/src/assets/liver.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
-                <RouterLink to="/check-list/fat"><img src="/src/assets/fat.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
+                <RouterLink to="/check-list/gallbladder"><img src="/src/assets/fat.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
                 <RouterLink to="/check-list/colon"><img src="/src/assets/colon.png" alt="" width="75" height="75" style="border-radius: 1000px;"></RouterLink>
             </div>
             <div class="a-center">
