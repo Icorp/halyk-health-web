@@ -1,46 +1,29 @@
 <template>
-    <input v-model="searchQuery" placeholder="Поиск доктора..." />
-    <div v-for="doctor in doctors">
+    <div>
+      <input v-model="searchQuery" placeholder="Поиск доктора..." />
+      <div v-for="doctor in filteredDoctors" :key="doctor.name">
         <DoctorComponent
-        v-bind:image="doctor.image" 
-        v-bind:name="doctor.name" 
-        v-bind:speciality="doctor.speciality"
-        v-bind:education="doctor.education" />
+          v-bind:image="doctor.image"
+          v-bind:name="doctor.name"
+          v-bind:speciality="doctor.speciality"
+          v-bind:education="doctor.education"
+        />
+      </div>
     </div>
-</template>
-
-<style>
-p {
-    margin: 0;
-    padding: 0;
-}
-</style>
-
-<script>
-
-import { ref } from 'vue';
-import DoctorComponent from './DoctorComponent.vue';
-
-
-export default {
+  </template>
+  
+  <script>
+  import { ref, computed } from 'vue';
+  import DoctorComponent from './DoctorComponent.vue';
+  
+  export default {
     components: {
-        DoctorComponent
-    },
-    methods: {
-        goBack() {
-            this.$router.go(-1)
-        },
-        filterDoctors: function (doctors) {
-                    return doctors.filter(function (doctor) {
-                        let regex = new RegExp('(' + app.searchQuery + ')', 'i');
-                        return doctor.name.match(regex);
-                    })
-                }
+      DoctorComponent,
     },
     data() {
-        return {
-
-            doctors: [
+      return {
+        searchQuery: '',
+        doctors: [
                 {
                     "image": "/src/assets/doctor.png",
                     "name": "Жанболат",
@@ -73,9 +56,16 @@ export default {
                     "time": "16:05",
                     "date": "24 апреля 2023",
                 },
-            ]
-        }
-    }
-}
-
-</script>
+            ],
+      };
+    },
+    computed: {
+      filteredDoctors() {
+        const query = this.searchQuery.toLowerCase();
+        return this.doctors.filter(doctor => {
+          return doctor.name.toLowerCase().includes(query);
+        });
+      },
+    },
+  };
+  </script>
