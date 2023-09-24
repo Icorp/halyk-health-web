@@ -1,66 +1,71 @@
 <template>
-    <div v-for="doctor in doctors">
+    <div>
+      <input v-model="searchQuery" placeholder="Поиск доктора..." />
+      <div v-for="doctor in filteredDoctors" :key="doctor.name">
         <DoctorComponent
-            v-bind:image="doctor.image"
-            v-bind:name="doctor.name"
-            v-bind:speciality="doctor.speciality"
-            v-bind:education="doctor.education"
+          v-bind:image="doctor.image"
+          v-bind:name="doctor.name"
+          v-bind:speciality="doctor.speciality"
+          v-bind:education="doctor.education"
         />
-</div>
-</template>
-
-<style>
-p {
-    margin: 0;
-    padding: 0;
-}
-</style>
-
-<script>
-
-import { ref } from 'vue';
-import DoctorComponent from './DoctorComponent.vue';
-
-
-export default {
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import { ref, computed } from 'vue';
+  import DoctorComponent from './DoctorComponent.vue';
+  
+  export default {
     components: {
-        DoctorComponent
+      DoctorComponent,
     },
-    methods: {
-        goBack() {
-            this.$router.go(-1)
-        }
+    data() {
+      return {
+        searchQuery: '',
+        doctors: [
+                {
+                    "image": "/src/assets/doctor.png",
+                    "name": "Жанболат",
+                    "speciality": "Терапевт",
+                    "education": "Универ 1",
+                    "time": "16:05",
+                    "date": "24 апреля 2023",
+                },
+                {
+                    "image": "/src/assets/doctor.png",
+                    "name": "Казбек",
+                    "speciality": "Хирург",
+                    "education": "Универ 2",
+                    "time": "16:05",
+                    "date": "24 апреля 2023",
+                },
+                {
+                    "image": "/src/assets/doctor.png",
+                    "name": "Аскар",
+                    "speciality": "Стомотолог",
+                    "education": "Универ 3",
+                    "time": "16:05",
+                    "date": "24 апреля 2023",
+                },
+                {
+                    "image": "/src/assets/doctor.png",
+                    "name": "Алдияр",
+                    "education": "",
+                    "speciality": "Окулист",
+                    "time": "16:05",
+                    "date": "24 апреля 2023",
+                },
+            ],
+      };
     },
-    data () {
-        return {
-            items: [
-                {
-                    "image": "/src/assets/doctor.png",
-                    "name": "PDF",
-                    "speciality": "27 апр. 2023",
-                    "education": "Пройдено",
-                },
-                {
-                    "image": "/src/assets/doctor.png",
-                    "name": "PDF",
-                    "speciality": "27 апр. 2023",
-                    "education": "Пройдено",
-                },
-                {
-                    "image": "/src/assets/doctor.png",
-                    "name": "PDF",
-                    "speciality": "27 апр. 2023",
-                    "education": "Пройдено",
-                },
-            ]
-        }
-    }
-}
-
-function filteredList() {
-  return doctors.filter((doctor) =>
-    doctor.name.toLowerCase().includes(input.value.toLowerCase())
-  );
-}
-
-</script>
+    computed: {
+      filteredDoctors() {
+        const query = this.searchQuery.toLowerCase();
+        return this.doctors.filter(doctor => {
+          return doctor.name.toLowerCase().includes(query);
+        });
+      },
+    },
+  };
+  </script>
