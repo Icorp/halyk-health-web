@@ -1,12 +1,12 @@
 <template>
+    <input v-model="searchQuery" placeholder="Поиск доктора..." />
     <div v-for="doctor in doctors">
         <DoctorComponent
-            v-bind:image="doctor.image"
-            v-bind:name="doctor.name"
-            v-bind:speciality="doctor.speciality"
-            v-bind:education="doctor.education"
-        />
-</div>
+        v-bind:image="doctor.image" 
+        v-bind:name="doctor.name" 
+        v-bind:speciality="doctor.speciality"
+        v-bind:education="doctor.education" />
+    </div>
 </template>
 
 <style>
@@ -29,10 +29,17 @@ export default {
     methods: {
         goBack() {
             this.$router.go(-1)
-        }
+        },
+        filterDoctors: function (doctors) {
+                    return doctors.filter(function (doctor) {
+                        let regex = new RegExp('(' + app.searchQuery + ')', 'i');
+                        return doctor.name.match(regex);
+                    })
+                }
     },
-    data () {
+    data() {
         return {
+
             doctors: [
                 {
                     "image": "/src/assets/doctor.png",
@@ -69,12 +76,6 @@ export default {
             ]
         }
     }
-}
-
-function filteredList() {
-  return doctors.filter((doctor) =>
-    doctor.name.toLowerCase().includes(input.value.toLowerCase())
-  );
 }
 
 </script>
